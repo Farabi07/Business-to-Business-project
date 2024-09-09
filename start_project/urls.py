@@ -31,6 +31,25 @@ urlpatterns = [
     path('branch/', include('authentication.urls.branch_urls')),
     path('city/', include('authentication.urls.city_urls')),
 
+    # core B2B
+    path('company/', include('core.urls.company_urls')),
+    path('contact/', include('core.urls.contact_urls')),
+    path('category/', include('core.urls.product_category_urls')),
+    path('review/', include('core.urls.product_review_urls')),
+    path('product/', include('core.urls.product_urls')),
+    path('product_type/', include('core.urls.product_type_urls')),
+    
+    # Sales B2B
+    path('order/', include('sales.urls.order_urls')),
+    path('order_item/', include('sales.urls.order_item_urls')),
+    path('invoice/', include('sales.urls.invoice_urls')),
+    path('bid/', include('sales.urls.bid_urls')),
+    path('bid_history/', include('sales.urls.bid_history_urls')),
+    path('payment_method/', include('sales.urls.payment_method_urls')),
+    path('transaction/', include('sales.urls.transaction_urls')),
+    path('shipping/', include('sales.urls.shipping_urls')),
+  
+
 
 
 	# Site Settings module

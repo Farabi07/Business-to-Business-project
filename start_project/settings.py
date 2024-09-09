@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'site_settings.apps.SiteSettingsConfig',
     'support.apps.SupportConfig',
     'core.apps.CoreConfig',
+    'monitoring.apps.MonitoringConfig',
+    'sales.apps.SalesConfig'
 
 
 ]
@@ -214,7 +216,7 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'TOURISM_IT',
+    'TITLE': 'Business',
     'DESCRIPTION': '',
     'VERSION': '1.0.0',
     # OTHER SETTINGS

@@ -17,3 +17,15 @@ class ContactAdmin(admin.ModelAdmin):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
 	list_display = [field.name for field in Product._meta.fields]
+
+@admin.register(ProductType)
+class ProductTypeAdmin(admin.ModelAdmin):
+	list_display = [field.name for field in ProductType._meta.fields]
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+	list_display = [field.name for field in Category._meta.fields]
+
+@admin.register(ProductReview)
+class ProductReviewAdmin(admin.ModelAdmin):
+	list_display = [field.name for field in ProductReview._meta.fields]
