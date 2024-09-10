@@ -49,7 +49,9 @@ urlpatterns = [
     path('transaction/', include('sales.urls.transaction_urls')),
     path('shipping/', include('sales.urls.shipping_urls')),
   
-
+    # Monitoring B2B
+    path('notification/',include('monitoring.urls.notification_urls')),
+    path('audit/', include('monitoring.urls.audit_urls')),
 
 
 	# Site Settings module
