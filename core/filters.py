@@ -39,8 +39,10 @@ class ProductReviewFilter(filters.FilterSet):
         fields = ['name', ]
 
 class ProductFilter(filters.FilterSet):
-    name = filters.CharFilter(field_name="name", lookup_expr='icontains')
+    name = filters.CharFilter(field_name="name", lookup_expr='icontains')  
+    min_price = filters.NumberFilter(field_name='price', lookup_expr='gte')  
+    max_price = filters.NumberFilter(field_name='price', lookup_expr='lte')
 
     class Meta:
         model = Product
-        fields = ['name', ]
+        fields = ['name', 'price'] 

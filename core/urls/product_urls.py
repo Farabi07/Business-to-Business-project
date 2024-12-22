@@ -5,6 +5,9 @@ from core.views import product_views as views
 
 urlpatterns = [
 	path('api/v1/product/all/', views.getAllProduct),
+    
+	path('api/v1/product/product_category_id/', views.getProductByCategoryId),
+
 
 	path('api/v1/product/without_pagination/all/', views.getAllProductWithoutPagination),
 

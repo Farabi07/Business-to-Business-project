@@ -1,0 +1,241 @@
+[
+    {
+      "model": "core.product",
+      "pk": 1,
+      "fields": {
+        "name": "High-end Laptop",
+        "description": "Powerful laptop with Intel i7 processor and 16GB RAM",
+        "price": "1500.00",
+        "stock_quantity": 50,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/laptop1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 2,
+      "fields": {
+        "name": "Wireless Mouse",
+        "description": "Ergonomic wireless mouse with smooth tracking",
+        "price": "30.00",
+        "stock_quantity": 150,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/mouse1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 3,
+      "fields": {
+        "name": "4K Monitor",
+        "description": "Ultrawide 4K display with HDR support",
+        "price": "1200.00",
+        "stock_quantity": 30,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/monitor1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 4,
+      "fields": {
+        "name": "Bluetooth Headphones",
+        "description": "Noise-canceling headphones with Bluetooth connectivity",
+        "price": "200.00",
+        "stock_quantity": 80,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/headphones1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 5,
+      "fields": {
+        "name": "Gaming Keyboard",
+        "description": "RGB backlit gaming keyboard with mechanical switches",
+        "price": "150.00",
+        "stock_quantity": 100,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/keyboard1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 6,
+      "fields": {
+        "name": "External SSD 1TB",
+        "description": "Fast external SSD with 1TB capacity",
+        "price": "100.00",
+        "stock_quantity": 70,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/ssd1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 7,
+      "fields": {
+        "name": "Smartphone",
+        "description": "Flagship smartphone with a 48MP camera and 5G support",
+        "price": "800.00",
+        "stock_quantity": 60,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/smartphone1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 8,
+      "fields": {
+        "name": "Wireless Charger",
+        "description": "Fast wireless charger for smartphones and earbuds",
+        "price": "25.00",
+        "stock_quantity": 120,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/charger1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 9,
+      "fields": {
+        "name": "Smartwatch",
+        "description": "Stylish smartwatch with fitness tracking and heart rate monitor",
+        "price": "150.00",
+        "stock_quantity": 110,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/smartwatch1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 10,
+      "fields": {
+        "name": "Laptop Backpack",
+        "description": "Durable backpack designed for laptops and accessories",
+        "price": "40.00",
+        "stock_quantity": 200,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/backpack1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 11,
+      "fields": {
+        "name": "Wireless Earbuds",
+        "description": "True wireless earbuds with noise cancellation",
+        "price": "80.00",
+        "stock_quantity": 50,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/earbuds1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 12,
+      "fields": {
+        "name": "Portable Speaker",
+        "description": "Waterproof portable speaker with 360-degree sound",
+        "price": "60.00",
+        "stock_quantity": 90,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/speaker1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 13,
+      "fields": {
+        "name": "Mechanical Mouse",
+        "description": "Precision gaming mouse with customizable buttons",
+        "price": "40.00",
+        "stock_quantity": 150,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/mouse2.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    },
+    {
+      "model": "core.product",
+      "pk": 14,
+      "fields": {
+        "name": "Tablet",
+        "description": "Lightweight tablet with 10-inch display and 64GB storage",
+        "price": "350.00",
+        "stock_quantity": 40,
+        "product_category": 1,
+        "product_type": 1,
+        "product_image": "/media/products/tablet1.jpg",
+        "created_by": 1,
+        "updated_by": 1,
+        "created_at": "2024-12-22T00:00:00Z",
+        "updated_at": "2024-12-22T00:00:00Z"
+      }
+    }
+  ]
+  

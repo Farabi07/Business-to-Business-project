@@ -172,9 +172,10 @@ class CategoryListSerializer(serializers.ModelSerializer):
 
 
 class CategoryMinimalSerializer(serializers.ModelSerializer):
+	type = ProductTypeMinimalSerializer()
 	class Meta:
 		model = Category
-		fields = ['id', 'name']
+		fields = ['id', 'name','type']
 
 
 
@@ -203,6 +204,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class ProductListSerializer(serializers.ModelSerializer):
+	product_category = CategoryMinimalSerializer()
 	created_by = serializers.SerializerMethodField()
 	updated_by = serializers.SerializerMethodField()
 	class Meta:

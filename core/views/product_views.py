@@ -26,36 +26,40 @@ from commons.pagination import Pagination
 		
 		OpenApiParameter("size"),
   ],
-	request=ProductSerializer,
-	responses=ProductSerializer
+	request=ProductListSerializer,
+	responses=ProductListSerializer
 )
 @api_view(['GET'])
 # @permission_classes([IsAuthenticated])
 # @has_permissions([PermissionEnum.PERMISSION_LIST_VIEW.name])
 def getAllProduct(request):
-	products = Product.objects.all()
-	total_elements = products.count()
+    products = Product.objects.all().order_by('-id')  # Order products by ID in descending order
+    total_elements = products.count()
 
-	page = request.query_params.get('page')
-	size = request.query_params.get('size')
+    # Pagination
+    page = request.query_params.get('page')
+    size = request.query_params.get('size')
+    pagination = Pagination()
+    pagination.page = page
+    pagination.size = size
+    paginated_products = pagination.paginate_data(products)
 
-	# Pagination
-	pagination = Pagination()
-	pagination.page = page
-	pagination.size = size
-	products = pagination.paginate_data(products)
+    serializer = ProductListSerializer(paginated_products, many=True)
 
-	serializer = ProductListSerializer(products, many=True)
+    # Get the latest 10 products (by ID)
+    latest_products = Product.objects.all().order_by('-id')[:10]
+    latest_serializer = ProductListSerializer(latest_products, many=True)
 
-	response = {
-		'products': serializer.data,
-		'page': pagination.page,
-		'size': pagination.size,
-		'total_pages': pagination.total_pages,
-		'total_elements': total_elements,
-	}
+    response = {
+        'products': serializer.data,  # Paginated products
+        'latest_products': latest_serializer.data,  # Last 10 products
+        'page': pagination.page,
+        'size': pagination.size,
+        'total_pages': pagination.total_pages,
+        'total_elements': total_elements,
+    }
 
-	return Response(response, status=status.HTTP_200_OK)
+    return Response(response, status=status.HTTP_200_OK)
 
 
 
@@ -190,3 +194,20 @@ def deleteProduct(request, pk):
 	except ObjectDoesNotExist:
 		return Response({'detail': f"Product id - {pk} doesn't exists"}, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET'])
+def getProductByCategoryId(request):
+    category_id = request.query_params.get('category_id')  # Get category_id from query parameters
+    if not category_id:
+        return Response({'error': 'category_id is required'}, status=status.HTTP_400_BAD_REQUEST)
+    
+    try:
+        # Filter products by product_category (ForeignKey to Category model)
+        products = Product.objects.filter(product_category_id=category_id)
+        if not products.exists():
+            return Response({'message': 'No products found for this category'}, status=status.HTTP_404_NOT_FOUND)
+
+        serializer = ProductListSerializer(products, many=True)
+        return Response({'products': serializer.data}, status=status.HTTP_200_OK)
+    
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
