@@ -194,9 +194,12 @@ def deleteProduct(request, pk):
 	except ObjectDoesNotExist:
 		return Response({'detail': f"Product id - {pk} doesn't exists"}, status=status.HTTP_400_BAD_REQUEST)
 
+	
+@extend_schema(request=ProductListSerializer, responses=ProductListSerializer)
 @api_view(['GET'])
+# @permission_classes([IsAuthenticated])
 def getProductByCategoryId(request):
-    category_id = request.query_params.get('category_id')  # Get category_id from query parameters
+    category_id = request.query_params.get('category_id')  
     if not category_id:
         return Response({'error': 'category_id is required'}, status=status.HTTP_400_BAD_REQUEST)
     

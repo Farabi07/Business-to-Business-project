@@ -1,0 +1,175 @@
+[
+    {
+        "model": "monitoring.audit",
+        "pk": 1,
+        "fields": {
+            "user": null,
+            "action": "Created",
+            "model_name": "Order",
+            "object_id": 1,
+            "timestamp": "2024-12-23T10:00:00Z",
+            "details": {"field": "total_amount", "old_value": null, "new_value": 3300},
+            "created_at": "2024-12-23T10:00:00Z",
+            "updated_at": "2024-12-23T10:00:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "monitoring.notification",
+        "pk": 1,
+        "fields": {
+            "company": 1,
+            "user": null,
+            "message": "Your order #1 has been shipped.",
+            "notification_type": "Order Update",
+            "is_read": false,
+            "created_at": "2024-12-23T12:00:00Z",
+            "updated_at": "2024-12-23T12:00:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "sales.bid",
+        "pk": 1,
+        "fields": {
+            "company": 2,
+            "product": 1,
+            "bid_amount": "1400.00",
+            "bid_date": "2024-12-23T11:00:00Z",
+            "status": "Pending",
+            "created_at": "2024-12-23T11:00:00Z",
+            "updated_at": "2024-12-23T11:00:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "sales.bidhistory",
+        "pk": 1,
+        "fields": {
+            "bid": 1,
+            "changed_by": null,
+            "change_date": "2024-12-23T12:00:00Z",
+            "old_status": "Pending",
+            "new_status": "Accepted",
+            "old_bid_amount": null,
+            "new_bid_amount": "1400.00",
+            "comment": "Bid accepted by admin.",
+            "created_at": "2024-12-23T12:00:00Z",
+            "updated_at": "2024-12-23T12:00:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "sales.invoice",
+        "pk": 1,
+        "fields": {
+            "order": 1,
+            "invoice_number": "INV-0001",
+            "company": 1,
+            "amount_due": "3300.00",
+            "amount_paid": "1500.00",
+            "due_date": "2024-12-30",
+            "status": "Unpaid",
+            "created_at": "2024-12-23T10:30:00Z",
+            "updated_at": "2024-12-23T10:30:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "sales.order",
+        "pk": 1,
+        "fields": {
+            "company": 1,
+            "contact": 1,
+            "order_date": "2024-12-23T10:00:00Z",
+            "total_amount": "3300.00",
+            "status": "Pending",
+            "created_at": "2024-12-23T10:00:00Z",
+            "updated_at": "2024-12-23T10:00:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "sales.orderitem",
+        "pk": 1,
+        "fields": {
+            "order": 1,
+            "product": 1,
+            "quantity": 2,
+            "unit_price": "1500.00",
+            "total_price": "3000.00",
+            "created_at": "2024-12-23T10:15:00Z",
+            "updated_at": "2024-12-23T10:15:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "sales.orderitem",
+        "pk": 2,
+        "fields": {
+            "order": 1,
+            "product": 2,
+            "quantity": 5,
+            "unit_price": "120.00",
+            "total_price": "600.00",
+            "created_at": "2024-12-23T10:20:00Z",
+            "updated_at": "2024-12-23T10:20:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "sales.paymentmethod",
+        "pk": 1,
+        "fields": {
+            "name": "Credit Card",
+            "description": "Payment via credit card.",
+            "is_active": true,
+            "created_at": "2024-12-01T10:00:00Z",
+            "updated_at": "2024-12-01T10:00:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "sales.shippingdetails",
+        "pk": 1,
+        "fields": {
+            "order": 1,
+            "shipping_address": "123 Tech Ave, NY",
+            "shipping_method": "FedEx Express",
+            "tracking_number": "FED123456789",
+            "status": "Shipped",
+            "estimated_delivery_date": "2024-12-27",
+            "created_at": "2024-12-23T11:00:00Z",
+            "updated_at": "2024-12-23T11:00:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    },
+    {
+        "model": "sales.transaction",
+        "pk": 1,
+        "fields": {
+            "order": 1,
+            "bid": null,
+            "company": 1,
+            "payment_method": 1,
+            "transaction_date": "2024-12-23T10:30:00Z",
+            "amount": "1500.00",
+            "transaction_type": "Payment",
+            "status": "Completed",
+            "created_at": "2024-12-23T10:30:00Z",
+            "updated_at": "2024-12-23T10:30:00Z",
+            "created_by": null,
+            "updated_by": null
+        }
+    }
+]

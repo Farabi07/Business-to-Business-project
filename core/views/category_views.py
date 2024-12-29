@@ -24,8 +24,8 @@ from commons.pagination import Pagination
 		
 		OpenApiParameter("size"),
   ],
-	request=CategorySerializer,
-	responses=CategorySerializer
+	request=CategoryListSerializer,
+	responses=CategoryListSerializer
 )
 @api_view(['GET'])
 # @permission_classes([IsAuthenticated])

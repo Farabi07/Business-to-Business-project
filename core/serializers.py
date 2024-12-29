@@ -107,7 +107,6 @@ class ContactSerializer(serializers.ModelSerializer):
 		return modelObject
 
 
-
 class ProductTypeListSerializer(serializers.ModelSerializer):
 	created_by = serializers.SerializerMethodField()
 	updated_by = serializers.SerializerMethodField()
@@ -156,6 +155,7 @@ class ProductTypeSerializer(serializers.ModelSerializer):
 
 
 class CategoryListSerializer(serializers.ModelSerializer):
+	type = ProductTypeMinimalSerializer()
 	created_by = serializers.SerializerMethodField()
 	updated_by = serializers.SerializerMethodField()
 	class Meta:
@@ -181,6 +181,7 @@ class CategoryMinimalSerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
+	type = ProductTypeMinimalSerializer()
 	class Meta:
 		model = Category
 		fields = '__all__'
